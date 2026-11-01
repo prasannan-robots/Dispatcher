@@ -1,5 +1,5 @@
 name: groundsystem
-description: "Ground System Dis  # UI Enhancements
+description: "Ground-station dispatcher: track handsets on a tactical map over Bluetooth or USB serial."
   # glassmorphism: ^3.0.0
   # animated_text_kit: ^4.2.2cher - BSF Radio Tracking Application"
 # The following line prevents the package from being accidentally published to

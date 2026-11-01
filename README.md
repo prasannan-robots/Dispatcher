@@ -1,16 +1,25 @@
-# groundsystem
+# Dispatcher — Ground System
 
-A new Flutter project.
+A tactical dispatch display for tracking handsets (radios / walkie-talkies) in the field. It
+plots each unit on a map with its call sign, link type (VHF / satellite / GSM) and status, and
+connects to a base station over **USB serial** or **Bluetooth** to receive live position and
+telemetry data.
 
-## Getting Started
+Built to pair with the DMR828 / walkie-talkie firmware projects.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Live tactical map (flutter_map) with per-handset markers and info popups.
+- Team roster with connection status and link type.
+- USB serial and Bluetooth serial connectivity (with a web stub so the UI still runs in a browser).
+- Settings for display and connection options.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+flutter run            # Android/desktop for real USB/Bluetooth; web for the UI only
+flutter build apk
+```
+
+Serial/Bluetooth need a real device; on web those services are stubbed out.

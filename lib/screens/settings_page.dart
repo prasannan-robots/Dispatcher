@@ -36,9 +36,9 @@ class _SettingsPageState extends State<SettingsPage> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colors.cyan.withOpacity(0.0),
-                  Colors.cyan.withOpacity(0.5),
-                  Colors.cyan.withOpacity(0.0),
+                  Colors.cyan.withValues(alpha: 0.0),
+                  Colors.cyan.withValues(alpha: 0.5),
+                  Colors.cyan.withValues(alpha: 0.0),
                 ],
               ),
             ),
@@ -106,15 +106,15 @@ class _SettingsPageState extends State<SettingsPage> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.grey[900]!.withOpacity(0.8),
-            Colors.black.withOpacity(0.9),
+            Colors.grey[900]!.withValues(alpha: 0.8),
+            Colors.black.withValues(alpha: 0.9),
           ],
         ),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: provider.isSimulationEnabled
-              ? Colors.green.withOpacity(0.5)
-              : Colors.grey.withOpacity(0.3),
+              ? Colors.green.withValues(alpha: 0.5)
+              : Colors.grey.withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -128,13 +128,13 @@ class _SettingsPageState extends State<SettingsPage> {
                 height: 40,
                 decoration: BoxDecoration(
                   color: provider.isSimulationEnabled
-                      ? Colors.green.withOpacity(0.2)
-                      : Colors.grey.withOpacity(0.2),
+                      ? Colors.green.withValues(alpha: 0.2)
+                      : Colors.grey.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
                     color: provider.isSimulationEnabled
-                        ? Colors.green.withOpacity(0.5)
-                        : Colors.grey.withOpacity(0.5),
+                        ? Colors.green.withValues(alpha: 0.5)
+                        : Colors.grey.withValues(alpha: 0.5),
                   ),
                 ),
                 child: Icon(
@@ -164,8 +164,8 @@ class _SettingsPageState extends State<SettingsPage> {
                           : 'Inactive - Units are stationary',
                       style: TextStyle(
                         color: provider.isSimulationEnabled
-                            ? Colors.green.withOpacity(0.8)
-                            : Colors.grey.withOpacity(0.8),
+                            ? Colors.green.withValues(alpha: 0.8)
+                            : Colors.grey.withValues(alpha: 0.8),
                         fontSize: 12,
                       ),
                     ),
@@ -190,10 +190,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                   );
                 },
-                activeColor: Colors.green,
-                activeTrackColor: Colors.green.withOpacity(0.3),
+                activeThumbColor: Colors.green,
+                activeTrackColor: Colors.green.withValues(alpha: 0.3),
                 inactiveThumbColor: Colors.grey,
-                inactiveTrackColor: Colors.grey.withOpacity(0.3),
+                inactiveTrackColor: Colors.grey.withValues(alpha: 0.3),
               ),
             ],
           ),
@@ -201,9 +201,9 @@ class _SettingsPageState extends State<SettingsPage> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.black.withValues(alpha: 0.3),
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.cyan.withOpacity(0.2)),
+              border: Border.all(color: Colors.cyan.withValues(alpha: 0.2)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -212,14 +212,14 @@ class _SettingsPageState extends State<SettingsPage> {
                   children: [
                     Icon(
                       Icons.info_outline,
-                      color: Colors.cyan.withOpacity(0.7),
+                      color: Colors.cyan.withValues(alpha: 0.7),
                       size: 16,
                     ),
                     const SizedBox(width: 8),
                     Text(
                       'SIMULATION INFO',
                       style: TextStyle(
-                        color: Colors.cyan.withOpacity(0.8),
+                        color: Colors.cyan.withValues(alpha: 0.8),
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
                       ),
@@ -235,7 +235,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   '• Simulation continues until manually disabled\n'
                   '• Perfect for recording realistic tactical operations',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha: 0.7),
                     fontSize: 11,
                     height: 1.4,
                   ),
@@ -257,12 +257,12 @@ class _SettingsPageState extends State<SettingsPage> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.grey[900]!.withOpacity(0.8),
-            Colors.black.withOpacity(0.9),
+            Colors.grey[900]!.withValues(alpha: 0.8),
+            Colors.black.withValues(alpha: 0.9),
           ],
         ),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.blue.withOpacity(0.3), width: 1),
+        border: Border.all(color: Colors.blue.withValues(alpha: 0.3), width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -337,12 +337,12 @@ class _SettingsPageState extends State<SettingsPage> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.grey[900]!.withOpacity(0.8),
-            Colors.black.withOpacity(0.9),
+            Colors.grey[900]!.withValues(alpha: 0.8),
+            Colors.black.withValues(alpha: 0.9),
           ],
         ),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.purple.withOpacity(0.3), width: 1),
+        border: Border.all(color: Colors.purple.withValues(alpha: 0.3), width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -367,7 +367,7 @@ class _SettingsPageState extends State<SettingsPage> {
             'Kupwara Sector Operations\n'
             'Version 1.0 - Tactical Display',
             style: TextStyle(
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
               fontSize: 12,
               height: 1.4,
             ),
