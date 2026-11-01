@@ -115,12 +115,12 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.grey[900]!.withOpacity(0.95),
-            Colors.black.withOpacity(0.98),
+            Colors.grey[900]!.withValues(alpha: 0.95),
+            Colors.black.withValues(alpha: 0.98),
           ],
         ),
         border: Border(
-          right: BorderSide(color: Colors.cyan.withOpacity(0.3), width: 1),
+          right: BorderSide(color: Colors.cyan.withValues(alpha: 0.3), width: 1),
         ),
       ),
       child: Column(
@@ -138,9 +138,9 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.cyan.withOpacity(0.2), Colors.blue.withOpacity(0.1)],
+          colors: [Colors.cyan.withValues(alpha: 0.2), Colors.blue.withValues(alpha: 0.1)],
         ),
-        border: Border(bottom: BorderSide(color: Colors.cyan.withOpacity(0.3))),
+        border: Border(bottom: BorderSide(color: Colors.cyan.withValues(alpha: 0.3))),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -164,7 +164,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
           Text(
             'KUPWARA SECTOR',
             style: TextStyle(
-              color: Colors.cyan.withOpacity(0.8),
+              color: Colors.cyan.withValues(alpha: 0.8),
               fontSize: 12,
               letterSpacing: 0.8,
             ),
@@ -197,12 +197,12 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: Colors.grey[900]!.withOpacity(0.6),
+        color: Colors.grey[900]!.withValues(alpha: 0.6),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
           color: isOnline
-              ? statusColor.withOpacity(0.3)
-              : Colors.grey.withOpacity(0.2),
+              ? statusColor.withValues(alpha: 0.3)
+              : Colors.grey.withValues(alpha: 0.2),
         ),
       ),
       child: ExpansionTile(
@@ -210,9 +210,9 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-            color: statusColor.withOpacity(0.2),
+            color: statusColor.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: statusColor.withOpacity(0.5)),
+            border: Border.all(color: statusColor.withValues(alpha: 0.5)),
           ),
           child: Icon(
             isOnline ? Icons.radio : Icons.portable_wifi_off,
@@ -234,7 +234,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
             Text(
               handset.id,
               style: TextStyle(
-                color: Colors.cyan.withOpacity(0.7),
+                color: Colors.cyan.withValues(alpha: 0.7),
                 fontSize: 11,
                 fontFamily: 'monospace',
               ),
@@ -326,7 +326,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        border: Border(top: BorderSide(color: Colors.cyan.withOpacity(0.3))),
+        border: Border(top: BorderSide(color: Colors.cyan.withValues(alpha: 0.3))),
       ),
       child: Column(
         children: [
@@ -338,9 +338,9 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                   icon: const Icon(Icons.settings, size: 16),
                   label: const Text('SETTINGS'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple.withOpacity(0.2),
+                    backgroundColor: Colors.purple.withValues(alpha: 0.2),
                     foregroundColor: Colors.purple,
-                    side: BorderSide(color: Colors.purple.withOpacity(0.5)),
+                    side: BorderSide(color: Colors.purple.withValues(alpha: 0.5)),
                   ),
                 ),
               ),
@@ -361,8 +361,8 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _serialService.isConnected
-                        ? Colors.green.withOpacity(0.2)
-                        : Colors.grey.withOpacity(0.2),
+                        ? Colors.green.withValues(alpha: 0.2)
+                        : Colors.grey.withValues(alpha: 0.2),
                     foregroundColor: _serialService.isConnected
                         ? Colors.green
                         : Colors.grey,
@@ -371,7 +371,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                           (_serialService.isConnected
                                   ? Colors.green
                                   : Colors.grey)
-                              .withOpacity(0.5),
+                              .withValues(alpha: 0.5),
                     ),
                   ),
                 ),
@@ -391,8 +391,8 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _bluetoothService.isConnected
-                        ? Colors.blue.withOpacity(0.2)
-                        : Colors.grey.withOpacity(0.2),
+                        ? Colors.blue.withValues(alpha: 0.2)
+                        : Colors.grey.withValues(alpha: 0.2),
                     foregroundColor: _bluetoothService.isConnected
                         ? Colors.blue
                         : Colors.grey,
@@ -401,7 +401,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                           (_bluetoothService.isConnected
                                   ? Colors.blue
                                   : Colors.grey)
-                              .withOpacity(0.5),
+                              .withValues(alpha: 0.5),
                     ),
                   ),
                 ),
@@ -464,7 +464,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                 _showLeftPane = !_showLeftPane;
               });
             },
-            backgroundColor: Colors.cyan.withOpacity(0.2),
+            backgroundColor: Colors.cyan.withValues(alpha: 0.2),
             child: Icon(
               _showLeftPane ? Icons.chevron_left : Icons.chevron_right,
               color: Colors.cyan,
@@ -493,10 +493,10 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
               height: 45,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.yellow.withOpacity(0.3),
+                color: Colors.yellow.withValues(alpha: 0.3),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.yellow.withOpacity(0.5),
+                    color: Colors.yellow.withValues(alpha: 0.5),
                     blurRadius: 8,
                     spreadRadius: 2,
                   ),
@@ -510,7 +510,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
               height: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: markerColor.withOpacity(0.15),
+                color: markerColor.withValues(alpha: 0.15),
               ),
             ),
           // Main marker - just the icon, no text to avoid overflow
@@ -526,7 +526,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withValues(alpha: 0.5),
                   blurRadius: 4,
                   offset: const Offset(0, 2),
                 ),
@@ -543,9 +543,9 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.7),
+        color: Colors.black.withValues(alpha: 0.7),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.cyan.withOpacity(0.3)),
+        border: Border.all(color: Colors.cyan.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -582,8 +582,8 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: _isSatelliteView
-                        ? Colors.cyan.withOpacity(0.3)
-                        : Colors.grey.withOpacity(0.3),
+                        ? Colors.cyan.withValues(alpha: 0.3)
+                        : Colors.grey.withValues(alpha: 0.3),
                     border: Border.all(
                       color: _isSatelliteView ? Colors.cyan : Colors.grey,
                       width: 1,
@@ -640,8 +640,8 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: _showHistoricalPaths
-                        ? Colors.orange.withOpacity(0.3)
-                        : Colors.grey.withOpacity(0.3),
+                        ? Colors.orange.withValues(alpha: 0.3)
+                        : Colors.grey.withValues(alpha: 0.3),
                     border: Border.all(
                       color: _showHistoricalPaths ? Colors.orange : Colors.grey,
                       width: 1,
@@ -673,7 +673,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
           Text(
             'TACTICAL VIEW',
             style: TextStyle(
-              color: Colors.white.withOpacity(0.8),
+              color: Colors.white.withValues(alpha: 0.8),
               fontSize: 10,
             ),
           ),
@@ -806,10 +806,10 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
               Polyline(
                 points: points,
                 strokeWidth: 3.0,
-                color: pathColor.withOpacity(0.7),
+                color: pathColor.withValues(alpha: 0.7),
                 gradientColors: [
-                  pathColor.withOpacity(0.3),
-                  pathColor.withOpacity(0.8),
+                  pathColor.withValues(alpha: 0.3),
+                  pathColor.withValues(alpha: 0.8),
                 ],
               ),
             ],
@@ -832,7 +832,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                 width: isLatest ? 12 : 8,
                 height: isLatest ? 12 : 8,
                 decoration: BoxDecoration(
-                  color: isLatest ? pathColor : pathColor.withOpacity(0.6),
+                  color: isLatest ? pathColor : pathColor.withValues(alpha: 0.6),
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: Colors.white,
@@ -840,7 +840,7 @@ class _TacticalDisplayState extends State<TacticalDisplay> {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
+                      color: Colors.black.withValues(alpha: 0.3),
                       blurRadius: 4,
                       offset: const Offset(0, 2),
                     ),
